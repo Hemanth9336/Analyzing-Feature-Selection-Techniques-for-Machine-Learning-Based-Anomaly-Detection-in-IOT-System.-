@@ -1,0 +1,290 @@
+Steps used in the project:
+
+1)Read the data
+2)Pre-processing:
+
+Data pre-processing is the concept of changing the raw data into a clean data set. The dataset is pre-processed 
+in order to check missing values, noisy data, and other inconsistencies before executing it to the algorithm. 
+Data must be in a format appropriate for ML.
+
+3)Feature engineering:
+
+Feature engineering is the process of using domain knowledge of the data to create features that make machine 
+learning algorithms work. The aim of feature engineering is to prepare an input data set that best fits the machine 
+learning algorithm as well as to enhance the performance of machine learning models.
+
+4)Splitting the data(70% 30%, 75% 25%, 80% 20%)
+5)Feature Selection:    --> Variance Threshold, Feature Importance, Correlation Matrix with Heatmap
+
+Feature Selection is the process where you automatically or manually select those features which contribute most 
+to your prediction variable or output in which you are interested. Having irrelevant features in your data can 
+decrease the accuracy of the models and make your model learn based on irrelevant features.
+
+6)Feature Extraction:   --> PCA, LDA
+
+The process of feature extraction is useful when you need to reduce the number of resources needed for processing 
+without losing important or relevant information. Feature extraction can also reduce the amount of redundant data 
+for a given analysis.
+
+7)Genetic Algorithm
+8)Roulette Wheel Selection
+
+Accuarcy:
+
+It is number of currently predicated data points out of all the datapoints
+Auuracy = TP+TN/ TP+TN+FP+FN(number of correct predicitions /Toatl number of predictions)
+
+Purpose:
+
+ML model accuracy is the measurement used to determine which model is best at identifying 
+relationships and patterns between variables in a dataset based on the input, or training, data.
+
+Optimization techinque:
+
+Optimization is the process where we train the model iteratively that results in a maximum and minimum function evaluation. 
+It is one of the most important phenomena in Machine Learning to get better results.
+
+Example :
+The genetic algorithm is a method for solving optimization problems. They are based on natural selection,
+and are inspired by the Darwinian optimization process that governs evolution in real life
+
+Uses:
+
+Optimization methods are used in many areas of study to find solutions that maximize or minimize some study parameters, 
+such as minimize costs in the production of a good or service, maximize profits, minimize raw material in the development of a good, or maximize production.
+
+Advantages:
+
+1.Process optimization leads to working more efficiently. 
+2.You can help your customers better. 
+3.It becomes easier to improve and grow.
+
+Evolutionary Algorithm:
+
+An evolutionary algorithm (EA) is an algorithm that uses mechanisms inspired by nature and solves problems through processes that emulate the behaviors of living organisms. 
+
+Uses:
+
+Evolutionary algorithms are typically used to provide good approximate solutions to problems that cannot be solved easily using other techniques.
+
+Gentic Algorithm:
+
+Genetic algorithms are commonly used to generate high-quality solutions to optimization and search problems 
+by relying on biologically inspired operators such as mutation, crossover and selection.
+
+Five phases are considered in a genetic algorithm:
+
+Initial population.
+Fitness function.
+Selection.
+Crossover.
+Mutation.
+
+Intial Population:
+
+Population Initialization is the first step in the Genetic Algorithm Process. 
+Population is a subset of solutions in the current generation. Population P can also be defined as a set of chromosomes. 
+The initial population P(0), which is the first generation is usually created randomly.
+
+Fitness Function:
+
+It is a function which takes a candidate solution to the problem as input and produces as output how “fit” our how “good” the solution is with respect to the problem in consideration.
+
+Selection Process:
+
+Selection is the stage of a genetic algorithm in which individual genomes are chosen from a population for later breeding.
+
+Crossover:
+
+It is used to combine the genetic information of two parents to generate new offspring.
+
+Uses:
+
+Crossover is a genetic operator used to vary the programming of a chromosome or chromosomes from one generation to the next. 
+
+Mutation:
+
+Mutation is a genetic operator used to maintain genetic diversity from one generation of a population of genetic algorithm chromosomes to the next. 
+It is analogous to biological mutation.mutation increases the fitness of the organism.
+
+Crossover Probabilty & Mutation Probablity:
+
+Crossover has a higher probability, typically 0.8-0.95. On the other hand, 
+mutation is carried out by flipping some digits of a string, which generates new solutions. This mutation probability is typically low, from 0.001 to 0.05.
+
+Roulette Wheel Selection:
+
+The roulette wheel selection method is used for selecting all the individuals for the next generation. 
+It is a popular selection method used in a genetic algorithm. A roulette wheel is constructed from the relative fitness of each individual.
+
+Feature Selection:
+
+Feature selection is the process of reducing the number of input variables when developing a predictive model. 
+Methodically reducing the size of datasets is important as the size and variety of datasets continue to grow.
+It is desirable to reduce the number of input variables to both reduce the computational cost of modeling and, in some cases, to improve the performance of the model.
+
+Uses:
+
+Feature selection improves the machine learning process and increases the predictive power of machine learning algorithms 
+Feature selection is the study of algorithms for reducing dimensionality of data to improve machine learning performance.
+
+Three key benefits of performing feature selection on your data are Reduces Overfitting, Improves Accuracy, Reduces Training Time, 
+
+Feature selection improves the machine learning process and increases the predictive power of machine learning algorithms by selecting 
+the most important variables and eliminating redundant and irrelevant features.
+
+*Feature Importance:
+Feature Importance refers to techniques that calculate a score for all the input features for a given model — the scores simply represent the 
+“importance” of each feature. A higher score means that the specific feature will have a larger effect on the model that is being used to predict a certain variable.
+
+It assigns the score of input features based on their importance to predict the output. More the features will be responsible to predict the output more will be 
+their score. We can use it in both classification and regression problem.
+
+Feature importance is calculated as the decrease in node impurity weighted by the probability of reaching that node. The node probability can be calculated by 
+the number of samples that reach the node, divided by the total number of samples. The higher the value the more important the feature.
+
+Knowing feature importance indicated by machine learning models can benefit you in multiple ways, for example: by getting a better understanding of the model's 
+logic you can not only verify it being correct but also work on improving the model by focusing only on the important variables.
+
+*Variance Threshold:
+The variance threshold is a simple baseline approach to feature selection. It removes all features which variance doesn't meet some threshold. By default, 
+it removes all zero-variance features, i.e., features that have the same value in all samples.
+
+We assume that features with a higher variance may contain more useful information, but note that we are not taking the relationship between feature variables 
+or feature and target variables into account, which is one of the drawbacks of filter methods.
+
+Variance thresholding is used to select those features with a variance above the suggested threshold. Ideally you would want to take in all features with a 
+non-zero variance but I'm not sure of the data you're handling, it would be better to calculate the variance of the individual feature, arrange them in the 
+increasing order of variance and then select that value where the variance sharply increases.
+
+*correlation matrix with heatmap:
+Correlation is often used to determine whether there is a cause-and-effect relationship between two variables.
+
+A correlation heatmap is a graphical representation of a correlation matrix representing the correlation between different variables. 
+The value of correlation can take any value from -1 to 1.
+
+Pearson correlation coefficient between two variables X and Y can be calculated using the following formula. X bar is the mean value of X and Y
+bar is the mean value of Y. Xi and Yi represents different values of X and Y.
+
+One of the fastest ways to strengthen a model is to identify and reduce the features in the dataset that are highly correlated.
+
+*feature engineering:
+Feature engineering is a machine learning technique that leverages data to create new variables that aren't in the training set.
+
+It can produce new features for both supervised and unsupervised learning, with the goal of simplifying and speeding up data 
+transformations while also enhancing model accuracy.
+
+Feature engineering consists of creation, transformation, extraction, and selection of features, also known as variables, that are most 
+conducive to creating an accurate ML algorithm. 
+
+Higher efficiency of the model. Easier Algorithms that fit the data. Easier for Algorithms to detect patterns in the data. Greater Flexibility of the features.
+
+Feature engineering is the pre-processing step of machine learning, which is used to transform raw data into features that can be used for creating a 
+predictive model using Machine learning or statistical Modelling.
+
+*Feature Extraction:
+Feature extraction is a process of dimensionality reduction by which an initial set of raw data is reduced to more manageable groups for processing. 
+
+The proposed algorithm is used to search for a set of linear combinations of the original features, whose mutual information with the output class 
+can be maximized. The mutual information between the extracted features and the output class is calculated by using the probability density estimation 
+based on the Parzen window method. 
+
+The technique of extracting the features is useful when you have a large data set and need to reduce the number of resources without losing any important or 
+relevant information. Feature extraction helps to reduce the amount of redundant data from the data set.
+
+Feature extraction helps to reduce the amount of redundant data from the data set. In the end, the reduction of the data helps to build the model with less 
+machine effort and also increases the speed of learning and generalization steps in the machine learning process.
+
+*Principal Component Analysis:
+Principal Component Analysis, or PCA, is a dimensionality-reduction method that is often used to reduce the dimensionality of large data sets, by transforming 
+a large set of variables into a smaller one that still contains most of the information in the large set.
+
+Removes Correlated Features. Improves Algorithm Performance. Reduces Overfitting. Improves Visualization
+
+The most important use of PCA is to represent a multivariate data table as smaller set of variables (summary indices) in order to observe trends, jumps, clusters 
+and outliers. This overview may uncover the relationships between observations and variables, and among the variables.
+
+*Linear Discriminant Analysis:
+The linear Discriminant analysis estimates the probability that a new set of inputs belongs to every class. The output class is the one that has the highest 
+probability. That is how the LDA makes its prediction. LDA uses Bayes Theorem to estimate the probabilities.
+
+Linear discriminant analysis is not just a dimension reduction tool, but also a robust classification method. With or without data normality assumption, 
+we can arrive at the same LDA features, which explains its robustness.
+
+Compute the d-dimensional mean vectors for the different classes from the dataset. Compute the scatter matrices (in-between-class and within-class scatter matrix). 
+Compute the eigenvectors (ee1,ee2,...,eed) and corresponding eigenvalues (λλ1,λλ2,...,λλd) for the scatter matrices.
+
+For Linear discriminant analysis (LDA): Σ k = Σ , . In LDA, as we mentioned, you simply assume for different k that the covariance matrix is identical. 
+By making this assumption, the classifier becomes linear.
+
+The advantage of LDA is that it uses information from both the features to create a new axis which in turn minimizes the variance and maximizes the 
+class distance of the two variables.
+
+Linear discriminant analysis is primarily used here to reduce the number of features to a more manageable number before classification. 
+
+Logistic Regression:
+
+* It is the go-to for binary classification.
+* Learning the Logistic regression coefficients is done using maximum-likelihood estimation,
+to predict values	close	to 1 for default class and close to	0 for the other class.
+* it is also known as sigmoid function.
+* the formula of sigmoid function is 1/1+e^-x.
+
+Advantages:
++ Good classification baseline considering simplicity
++ Possibility to change	cutoff for precision/recall tradeoff
++ Robust to	noise/overfitting	with L1/L2 regularization
++ Probability output can be used for ranking
+
+Naive Bayes Classifier:
+
+* It is a classifier which acts as a probabilistic machine learning model used for 
+classification task the crux of the classifier is based on bayes theorem.
+* formula for Bayes theorem is P(A|B) = P(B|A)*P(A)/P(B).
+
+Advantages:
++ Fast because of the calculations
++ If the naive assumptions works can converge quicker than other models. Can be used
+on smaller training data.
++ Good for few categories variables
+
+
+K-Nearest Neighbors:
+
+* Input data is indexed to find the closest neighbours.
+* Data is compared in the inferencing phase to save time.
+* Belongs to the category of lazy learners.
+
+
+Advantages:
++ Effective	if the training data is large
++ No learning phase
++ Robust to noisy	data,	no need to filter outliers
+
+Decision Tree:
+
+* It is a type of supervised learning algorithm that is mostly used in classification 
+problems and works for both categorical and continuous input and output variables.
+* A decision tree is a tree in which each branch node represents a choice between a 
+number of alternatives and each leaf node represents a decision.
+
+Advantages:
++ Easy to understand, interpret, visualize.
++ Useful in data exploration
++ Less data preparation needed
+
+Random Forest:
+
+* Random Forest is a tweaked version of bagged decision trees to reduce tree correlation.
+
+Advantages:
+In addition	to the advantages	of the CART	algorithm
++ Robust to	overfitting and missing	variables
++ Can	be parallelized for distributed computing
++ Performance as good as SVM but easier to interpret
+
+
+
+
+
+
